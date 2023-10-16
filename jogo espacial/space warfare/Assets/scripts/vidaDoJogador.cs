@@ -37,6 +37,7 @@ public class vidaDoJogador : MonoBehaviour
             {
                 Debug.Log("Game Over");
             }
+            Observer.EnergyChanged((float) vidaAtualDoJogador/vidaMaxDoJogador);
         }
     }
     

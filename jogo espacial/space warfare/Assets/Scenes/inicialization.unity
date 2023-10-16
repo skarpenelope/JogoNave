@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 157163746}
+  - component: {fileID: 157163747}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -154,3 +155,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &157163747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157163745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f87f27743ba734bb8ded5fceb6e465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerstart: 
+  player: {fileID: 4865090620064021846, guid: 24606133d1a136041b9ce42e4c50ab41, type: 3}
+  spawmPlayer: {fileID: 0}
+  "pontua\xE7\xE3oAtual": 0
+  "pontua\xE7\xE3o": {fileID: 0}
+  lvl_1: lvl_1

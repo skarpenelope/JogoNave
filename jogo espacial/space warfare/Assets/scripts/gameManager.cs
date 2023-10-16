@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
+    public GameObject playerstart;
+    public GameObject player;
+    public Transform spawmPlayer;
     public static gameManager instance;
     public int pontuaçãoAtual;
 
@@ -48,13 +51,25 @@ public class gameManager : MonoBehaviour
 
     public void AumentarPontuação(int pontosParaGanhar)
     {
-        pontuação.text = "PONTUAÇAÕ:" + pontuaçãoAtual;
+        pontuação.text = "PONTUACAO:" + pontuaçãoAtual;
         pontuaçãoAtual += pontosParaGanhar;
+        Observer.PointsChanged(pontuaçãoAtual);
     }
     
     public void LoadScene()
     {
         SceneManager.LoadScene("GUI");
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Additive);
+    }
+
+    public void Cenas()
+    {
+        SceneManager.LoadScene("GUI");
+        SceneManager.LoadSceneAsync("lvl_1", LoadSceneMode.Additive).completed += delegate(AsyncOperation operation)
+        {
+            playerstart = GameObject.FindWithTag("playerstart");
+            Instantiate(player, spawmPlayer.transform.position,  Quaternion.Euler(0,0,0));
+
+        };
     }
 }
